@@ -1,0 +1,12 @@
+sudo: required
+services: docker
+jobs:
+  include: 
+    - language: node_js
+      node_js:
+        - 16
+      env: power
+      arch: ppc64le
+      group: power-beta
+      script:
+        - sudo apt-get -y -qq install sshpass
