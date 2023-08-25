@@ -11,4 +11,5 @@ jobs:
       node_js:
         - 16
       script:
-        - sudo apt-get -y -qq install sshpass
+        - docker version
+        - docker run -d -p 80:80 --name test_docker -v $HOME:/usr nginx
