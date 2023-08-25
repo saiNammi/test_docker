@@ -13,3 +13,6 @@ jobs:
       script:
         - docker version
         - docker run -d -p 80:80 --name test_docker -v $HOME:/usr nginx
+        - docker ps
+        - nproc
+        - docker inspect --format '{{.HostConfig.CpuShares}}' test_docker
