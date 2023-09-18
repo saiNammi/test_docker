@@ -3,11 +3,15 @@ dist: focal
 arch: ppc64le
 
 
+
         
 services:
     - docker
 jobs:
   include: 
     - name: test
+      language: node_js
+      node_js:
+        - "18"
       script:
         - pwd
