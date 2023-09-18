@@ -1,14 +1,14 @@
 os: linux
 dist: focal
 arch: ppc64le
-
-
+language: node_js
+node_js:
+        - 18
+        
 services:
     - docker
 jobs:
   include: 
-    - language: node_js
-      node_js:
-        - 18
+    - name: test
       script:
         - pwd
