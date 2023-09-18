@@ -1,7 +1,6 @@
-os: linux
 dist: focal
 arch: ppc64le
-group: edge
+
 
 services:
     - docker
@@ -9,10 +8,6 @@ jobs:
   include: 
     - language: node_js
       node_js:
-        - 16
+        - 18
       script:
-        - docker version
-        - docker run -d -p 80:80 --name test_docker -v $HOME:/usr nginx
-        - docker ps
-        - nproc
-        - docker inspect --format '{{.HostConfig.CpuShares}}' test_docker
+        - pwd
