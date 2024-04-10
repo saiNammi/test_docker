@@ -12,16 +12,12 @@ jobs:
       script:
         - docker pull ubuntu:23.04
         - docker images
-        - docker run --privileged ubuntu:23.04 echo "Hello, world!"
-        - docker run quay.io/podman/stable echo "Hello, world!"
-        - docker run --privileged quay.io/podman/stable echo "Hello, world!"
     - language: shell
       arch: ppc64le   
       dist: focal
+      group: edge
       script:
         - docker run quay.io/podman/stable echo "Hello, world!"
-        - docker run --privileged quay.io/podman/stable echo "Hello, world!"
-        - docker pull ubuntu:23.04
         - docker images
-        - docker run --privileged ubuntu:23.04 echo "Hello, world!"
+
         
