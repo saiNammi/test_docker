@@ -11,7 +11,8 @@ jobs:
       os: linux
       dist: focal
       script:
-        - docker pull ubuntu:23.04
+        - cat /usr/local/bin/docker_func
+        - docker run quay.io/podman/stable echo "Hello, world!"
         - docker images
     - language: shell
       arch: ppc64le   
