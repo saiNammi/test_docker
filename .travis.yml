@@ -19,6 +19,7 @@ jobs:
       dist: focal
       group: edge
       script:
+        - cat /usr/local/bin/docker_func
         - docker run quay.io/podman/stable echo "Hello, world!"
         - docker images
 
