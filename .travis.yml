@@ -7,6 +7,7 @@ services:
 jobs:
   include: 
     - language: shell
+      arch: ppc4le
       os: linux
       dist: focal
       script:
@@ -14,6 +15,7 @@ jobs:
         - docker images
     - language: shell
       arch: ppc64le   
+      os: linux
       dist: focal
       group: edge
       script:
